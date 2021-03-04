@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/elliotforbes/athena/port"
+	"github.com/akshith6212/portscanner/portscanner"
 )
 
 func main() {

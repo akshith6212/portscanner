@@ -1,3 +1,1 @@
-module github.com/elliotforbes/athena
-
-go 1.13
+module github.com/akshith6212/portscanner

@@ -2,6 +2,7 @@
 package port
 
 import (
+	"fmt"
 	"net"
 	"strconv"
 	"time"
@@ -31,11 +32,14 @@ func InitialScan(hostname string) []ScanResult {
 
 	var results []ScanResult
 
-	for i := 0; i <= 1024; i++ {
-		results = append(results, ScanPort("udp", hostname, i))
-	}
+// 	for i := 0; i <= 1024; i++ {
+// 		results = append(results, ScanPort("udp", hostname, i))
+// 	}
 
 	for i := 0; i <= 1024; i++ {
+		if i%50 == 0 {
+			fmt.Println(i)
+		}
 		results = append(results, ScanPort("tcp", hostname, i))
 	}
 
